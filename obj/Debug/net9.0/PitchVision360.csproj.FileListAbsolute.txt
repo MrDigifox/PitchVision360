@@ -1,0 +1,14 @@
+C:\Users\izzy_\OneDrive\Desktop\SDC320\Match Vision 360\PitchVision360\bin\Debug\net9.0\PitchVision360.exe
+C:\Users\izzy_\OneDrive\Desktop\SDC320\Match Vision 360\PitchVision360\bin\Debug\net9.0\PitchVision360.deps.json
+C:\Users\izzy_\OneDrive\Desktop\SDC320\Match Vision 360\PitchVision360\bin\Debug\net9.0\PitchVision360.runtimeconfig.json
+C:\Users\izzy_\OneDrive\Desktop\SDC320\Match Vision 360\PitchVision360\bin\Debug\net9.0\PitchVision360.dll
+C:\Users\izzy_\OneDrive\Desktop\SDC320\Match Vision 360\PitchVision360\bin\Debug\net9.0\PitchVision360.pdb
+C:\Users\izzy_\OneDrive\Desktop\SDC320\Match Vision 360\PitchVision360\obj\Debug\net9.0\PitchVision360.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\izzy_\OneDrive\Desktop\SDC320\Match Vision 360\PitchVision360\obj\Debug\net9.0\PitchVision360.AssemblyInfoInputs.cache
+C:\Users\izzy_\OneDrive\Desktop\SDC320\Match Vision 360\PitchVision360\obj\Debug\net9.0\PitchVision360.AssemblyInfo.cs
+C:\Users\izzy_\OneDrive\Desktop\SDC320\Match Vision 360\PitchVision360\obj\Debug\net9.0\PitchVision360.csproj.CoreCompileInputs.cache
+C:\Users\izzy_\OneDrive\Desktop\SDC320\Match Vision 360\PitchVision360\obj\Debug\net9.0\PitchVision360.dll
+C:\Users\izzy_\OneDrive\Desktop\SDC320\Match Vision 360\PitchVision360\obj\Debug\net9.0\refint\PitchVision360.dll
+C:\Users\izzy_\OneDrive\Desktop\SDC320\Match Vision 360\PitchVision360\obj\Debug\net9.0\PitchVision360.pdb
+C:\Users\izzy_\OneDrive\Desktop\SDC320\Match Vision 360\PitchVision360\obj\Debug\net9.0\PitchVision360.genruntimeconfig.cache
+C:\Users\izzy_\OneDrive\Desktop\SDC320\Match Vision 360\PitchVision360\obj\Debug\net9.0\ref\PitchVision360.dll

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "PitchVision360/1.0.0": {
+        "runtime": {
+          "PitchVision360.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PitchVision360/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
