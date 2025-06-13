@@ -1,5 +1,5 @@
-//Author: Israel OrtizRodriguez  |  GitHub: MrDigifox
-//The big cheese: holds rosters, events, and can spit out CSVs so coaches don’t have to decode my handwriting.
+//Israel OrtizRodriguez  |  GitHub: DigiFox
+//The big cheese: holds rosters, events, writes CSV, AND now logs to SQLite.
 
 using System;
 using System.Collections.Generic;
@@ -25,10 +25,19 @@ namespace PitchVision360
             HomeTeam  = home;
             AwayTeam  = away;
         }
-        public void AddPlayer(Player p, bool isHome) =>                                                  //roster and event helpers
+        public void AddPlayer(Player p, bool isHome)        //roster and events
+        {
             (isHome ? _homeRoster : _awayRoster).Add(p);
 
-        public void AddEvent(MatchEvent e) => _events.Add(e);
+            DatabaseHelper.InsertPlayer(p, isHome ? HomeTeam : AwayTeam);
+        }
+
+        public void AddEvent(MatchEvent e)
+        {
+            _events.Add(e);
+
+            DatabaseHelper.InsertEvent(e, MatchDate);           //ability to write events to a table
+        }
 
         public bool PlayerExists(string name) =>
             _homeRoster.Concat(_awayRoster)
@@ -38,7 +47,7 @@ namespace PitchVision360
             _homeRoster.Concat(_awayRoster)
                        .First(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
 
-        public string GetLiveSummary()                                                                  //live summary.
+        public string GetLiveSummary()                                                                      //summary
         {
             int homeGoals = _events.Count(e => e.Team == HomeTeam && e.Action == ActionType.Goal);
             int awayGoals = _events.Count(e => e.Team == AwayTeam && e.Action == ActionType.Goal);
@@ -52,16 +61,16 @@ namespace PitchVision360
             return sb.ToString();
         }
 
-        public void SaveFiles(string folder = "Data")                                                   //save to /Data as CSV 
+        public void SaveFiles(string folder = "Data")                       //save option to CSV
         {
             Directory.CreateDirectory(folder);
 
-            var rosterPath  = Path.Combine(folder, "Roster.csv");                                       //Roster.csv
+            var rosterPath  = Path.Combine(folder, "Roster.csv");           //roster via CSV
             var rosterLines = _homeRoster.Concat(_awayRoster).Select(p =>
                 $"{p.PlayerId},{p.Name},{p.JerseyNumber},{p.Position},{p.SchoolYear},{( _homeRoster.Contains(p) ? HomeTeam : AwayTeam )}");
             File.WriteAllLines(rosterPath, rosterLines);
 
-            var eventsPath = Path.Combine(folder, "Events.csv");                                        //Events.csv
+            var eventsPath = Path.Combine(folder, "Events.csv");            //events via CSV
             var eventLines = _events.Select((e, i) =>
                 $"{i + 1},{e.Minute},{e.Actor.PlayerId},{e.Action},{e.Team},{MatchDate:d}");
             File.WriteAllLines(eventsPath, eventLines);

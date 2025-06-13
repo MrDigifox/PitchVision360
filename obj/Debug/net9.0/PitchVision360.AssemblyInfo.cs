@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PitchVision360")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e4d5ca8b4a24e9772b9c02bccaf2842594804dba")]
 [assembly: System.Reflection.AssemblyProductAttribute("PitchVision360")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PitchVision360")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

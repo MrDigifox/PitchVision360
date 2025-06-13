@@ -46,6 +46,7 @@ class Program
     static void Main()
     {
         Console.WriteLine("Pitch Vision 360 – Console Logger");
+        DatabaseHelper.EnsureDatabase();                                                            //Boot-Strapping the Database
         Console.Write("Home team? "); string home = Console.ReadLine();
         Console.Write("Away team? "); string away = Console.ReadLine();
 
